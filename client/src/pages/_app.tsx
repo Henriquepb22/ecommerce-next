@@ -12,6 +12,7 @@ function App({ Component, pageProps }: AppProps) {
                     name="description"
                     content="A simple project boilerplate to work with React, Next, React Testing Library, Styled-components and Typescript"
                 />
+                <link rel="manifest" href="/manifest.json" />
             </Head>
             <GlobalStyles />
             <Component {...pageProps} />
