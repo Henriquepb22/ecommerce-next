@@ -1,23 +1,22 @@
 {
-  "collectionName": "components_page_teches",
+  "collectionName": "components_page_tech_icons",
   "info": {
-    "name": "tech",
-    "icon": "list-ol"
+    "name": "techIcons",
+    "icon": "list-ul"
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "maxLength": 20
-    },
-    "image": {
+    "icon": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
+      "required": true
+    },
+    "title": {
+      "type": "string",
       "required": true
     }
   }

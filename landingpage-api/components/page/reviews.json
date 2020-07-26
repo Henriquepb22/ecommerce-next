@@ -1,24 +1,27 @@
 {
-  "collectionName": "components_page_teches",
+  "collectionName": "components_page_reviews",
   "info": {
-    "name": "tech",
-    "icon": "list-ol"
+    "name": "reviews",
+    "icon": "star-half"
   },
   "options": {},
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 20
+      "required":   true
     },
-    "image": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "photo": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
     }
   }
 }

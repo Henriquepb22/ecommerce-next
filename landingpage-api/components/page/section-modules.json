@@ -2,7 +2,7 @@
   "collectionName": "components_page_section_modules",
   "info": {
     "name": "sectionModules",
-    "icon": "book-reader"
+    "icon": "book"
   },
   "options": {},
   "attributes": {
@@ -10,10 +10,10 @@
       "type": "string",
       "required": true
     },
-    "module": {
+    "modules": {
       "type": "component",
       "repeatable": true,
-      "component": "page.module",
+      "component": "page.modules",
       "required": true,
       "min": 2
     }
