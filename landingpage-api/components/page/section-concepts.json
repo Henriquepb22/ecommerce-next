@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_section_concepts",
+  "info": {
+    "name": "sectionConcepts",
+    "icon": "book-open"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "concepts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.concepts",
+      "required": true,
+      "min": 6,
+      "max": 18
+    }
+  }
+}
