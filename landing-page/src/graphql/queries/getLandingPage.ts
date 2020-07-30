@@ -36,11 +36,10 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     sectionTech {
       title
       techIcons {
+        title
         icon {
-          alternativeText
           url
         }
-        title
       }
     }
   }
@@ -110,7 +109,6 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       reviews {
         photo {
           url
-          alternativeText
         }
         name
         text

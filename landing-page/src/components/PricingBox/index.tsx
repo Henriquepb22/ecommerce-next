@@ -31,7 +31,9 @@ const PricingBox = ({
       <p>{button.label}</p>
       <div>
         <S.ButtonFullPrice>R${totalPrice}</S.ButtonFullPrice>
-        <S.ButtonDiscountPrice>R$289</S.ButtonDiscountPrice>
+        <S.ButtonDiscountPrice>
+          R${numberInstallments * priceInstallment}
+        </S.ButtonDiscountPrice>
       </div>
     </Button>
   </S.Box>

@@ -5,7 +5,6 @@ import Container from 'components/Container'
 import ProfileCard from 'components/ProfileCard'
 
 import { SectionAboutUsProps } from 'types/api'
-import { getImageUrl } from 'utils/getImageUrl'
 
 import * as S from './styles'
 
@@ -19,7 +18,7 @@ const SectionAboutUs = ({ title, authors }: SectionAboutUsProps) => (
           key={name}
           name={name}
           role={role}
-          image={getImageUrl(photo.url)}
+          photo={photo}
           socialLinks={[...socialLinks]}
           description={description}
         />

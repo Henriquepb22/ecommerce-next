@@ -59,7 +59,7 @@ export const DiscountPrice = styled.p`
   `}
 `
 
-export const BenefitsList = styled.ul`
+export const BenefitsList = styled.div`
   ul {
     ${({ theme }) => css`
       list-style: none;

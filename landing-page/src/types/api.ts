@@ -1,7 +1,9 @@
-export type LogoProps = {
+export type Image = {
   url: string
   alternativeText: string
 }
+
+export type LogoProps = Image
 
 export type HeaderProps = {
   title: string
@@ -10,49 +12,40 @@ export type HeaderProps = {
     url: string
     label: string
   }
-  image: {
-    url: string
-    alternativeText: string
-  }
+  image: Image
 }
 
 export type SectionAboutProjectProps = {
-  image: {
-    url: string
-    alternativeText: string
-  }
+  image: Image
   title: string
   description: string
 }
 
 export type SectionTechProps = {
   title: string
-  techIcons: [TechIcons]
+  techIcons: [TechIcon]
 }
 
-export type TechIcons = {
+export type TechIcon = {
   title: string
-  icon: {
-    alternativeText: string
-    url: string
-  }
+  icon: Image
 }
 
 export type SectionConceptsProps = {
   title: string
-  concepts: [Concepts]
+  concepts: [Concept]
 }
 
-export type Concepts = {
+export type Concept = {
   title: string
 }
 
 export type SectionModulesProps = {
   title: string
-  modules: [Modules]
+  modules: [Module]
 }
 
-export type Modules = {
+export type Module = {
   title: string
   subtitle: string
   description: string
@@ -76,34 +69,30 @@ export type PricingBoxProps = {
 
 export type SectionAboutUsProps = {
   title: string
-  authors: [Authors]
+  authors: [Author]
 }
 
-export type Authors = {
-  photo: {
-    url: string
-    alternativeText: string
-  }
+export type Author = {
+  photo: Image
   name: string
   role: string
-  socialLinks: [SocialLinks]
+  socialLinks: [SocialLink]
   description: string
 }
 
-export type SocialLinks = {
+export type SocialLink = {
   title: string
   url: string
 }
 
 export type SectionReviewsProps = {
   title: string
-  reviews: [Reviews]
+  reviews: [Review]
 }
 
-export type Reviews = {
+export type Review = {
   photo: {
     url: string
-    alternativeText: string
   }
   name: string
   text: string
@@ -111,10 +100,10 @@ export type Reviews = {
 
 export type SectionFaqProps = {
   title: string
-  questions: [Questions]
+  questions: [Question]
 }
 
-export type Questions = {
+export type Question = {
   question: string
   answer: string
 }

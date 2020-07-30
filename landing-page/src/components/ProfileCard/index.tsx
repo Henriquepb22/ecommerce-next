@@ -3,6 +3,9 @@ import React from 'react'
 import { GrGithub } from 'react-icons/gr'
 import { FaDribbble, FaTwitter } from 'react-icons/fa'
 
+import { getImageUrl } from 'utils/getImageUrl'
+import { Author } from 'types/api'
+
 import * as S from './styles'
 
 const icons = {
@@ -11,34 +14,25 @@ const icons = {
   Dribbble: <FaDribbble />
 }
 
-type socialLinks = {
-  title: string
-  url: string
-}
-
-type Props = {
-  name: string
-  role: string
-  image: string
-  socialLinks: socialLinks[]
-  description: string
-}
-
-const ProfileCard: React.FC<Props> = ({
+const ProfileCard: React.FC<Author> = ({
   name,
   role,
-  image,
-  socialLinks,
-  description
+  photo,
+  description,
+  socialLinks
 }) => (
   <S.Card key={name}>
-    <S.Image src={image} loading="lazy" alt={name} />
+    <S.Image
+      src={getImageUrl(photo.url)}
+      loading="lazy"
+      alt={photo.alternativeText}
+    />
     <S.Name>{name}</S.Name>
     <S.Role>{role}</S.Role>
     <S.SocialLinks>
       {socialLinks.map((item) => (
         <S.Link key={item.title}>
-          <a href={item.url} title={item.url}>
+          <a href={item.url} title={item.title}>
             {icons[item.title]}
           </a>
         </S.Link>

@@ -5,6 +5,7 @@ import Container from 'components/Container'
 
 import { SectionTechProps } from 'types/api'
 import { getImageUrl } from 'utils/getImageUrl'
+
 import * as S from './styles'
 
 const SectionTech = ({ title, techIcons }: SectionTechProps) => (
@@ -14,11 +15,7 @@ const SectionTech = ({ title, techIcons }: SectionTechProps) => (
       <S.IconsContainer>
         {techIcons.map(({ title, icon }) => (
           <S.Icon key={title}>
-            <S.Icons
-              src={getImageUrl(icon.url)}
-              alt={icon.alternativeText}
-              loading="lazy"
-            />
+            <S.Icons src={getImageUrl(icon.url)} alt={title} loading="lazy" />
             <S.IconsName>{title}</S.IconsName>
           </S.Icon>
         ))}
