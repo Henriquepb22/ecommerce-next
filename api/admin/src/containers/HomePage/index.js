@@ -6,13 +6,9 @@
 /* eslint-disable */
 import React, { memo } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { get, upperFirst } from 'lodash';
-import { auth } from 'strapi-helper-plugin';
 import PageTitle from '../../components/PageTitle';
 
-import useFetch from './hooks';
-import { ALink, Block, Container, LinkWrapper, P, Wave, Separator } from './components';
-import BlogPost from './BlogPost';
+import { ALink, Block, Container, LinkWrapper, P, Separator } from './components';
 import SocialLink from './SocialLink';
 
 const FIRST_BLOCK_LINKS = [
@@ -32,58 +28,19 @@ const FIRST_BLOCK_LINKS = [
 const SOCIAL_LINKS = [
   {
     name: 'GitHub',
-    link: 'https://github.com/strapi/strapi/',
+    link: 'https://github.com/React-avancado/',
   },
   {
     name: 'Slack',
-    link: 'https://slack.strapi.io/',
-  },
-  {
-    name: 'Medium',
-    link: 'https://medium.com/@strapi',
+    link: 'https://bit.ly/will-slack',
   },
   {
     name: 'Twitter',
-    link: 'https://twitter.com/strapijs',
-  },
-  {
-    name: 'Reddit',
-    link: 'https://www.reddit.com/r/Strapi/',
+    link: 'https://twitter.com/henriquepbdev',
   },
 ];
 
-const HomePage = ({ global: { plugins }, history: { push } }) => {
-  const { error, isLoading, posts } = useFetch();
-  const handleClick = e => {
-    e.preventDefault();
-
-    push(
-      '/plugins/content-type-builder/content-types/plugins::users-permissions.user?modalType=contentType&kind=collectionType&actionType=create&settingType=base&forTarget=contentType&headerId=content-type-builder.modalForm.contentType.header-create&header_icon_isCustom_1=false&header_icon_name_1=contentType&header_label_1=null'
-    );
-  };
-  const hasAlreadyCreatedContentTypes =
-    get(plugins, ['content-manager', 'leftMenuSections', '0', 'links'], []).filter(
-      contentType => contentType.isDisplayed === true
-    ).length > 1;
-
-  const headerId = hasAlreadyCreatedContentTypes
-    ? 'HomePage.greetings'
-    : 'app.components.HomePage.welcome';
-  const username = get(auth.getUserInfo(), 'username', '');
-  const linkProps = hasAlreadyCreatedContentTypes
-    ? {
-        id: 'app.components.HomePage.button.blog',
-        href: 'https://strapi.io/blog/',
-        onClick: () => {},
-        type: 'blog',
-        target: '_blank',
-      }
-    : {
-        id: 'app.components.HomePage.create',
-        href: '',
-        onClick: handleClick,
-        type: 'documentation',
-      };
+const HomePage = () => {
 
   return (
     <>
@@ -95,35 +52,7 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
           <div className="col-lg-8 col-md-12">
             <Block>
                 <h2 id="mainHeader">Bem vindo a Won Games!</h2>
-              {hasAlreadyCreatedContentTypes ? (
-                  <P>Adiciona jogos ao lado</P>
-              ) : (
-                  <P>Adicione jogos ao lado</P>
-              )}
-              {hasAlreadyCreatedContentTypes && (
-                <div style={{ marginTop: isLoading ? 60 : 50 }}>
-                  {posts.map((post, index) => (
-                    <BlogPost
-                      {...post}
-                      key={post.link}
-                      isFirst={index === 0}
-                      isLoading={isLoading}
-                      error={error}
-                    />
-                  ))}
-                </div>
-              )}
-              <FormattedMessage id={linkProps.id}>
-                {msg => (
-                  <ALink
-                    rel="noopener noreferrer"
-                    {...linkProps}
-                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
-                  >
-                    {msg}
-                  </ALink>
-                )}
-              </FormattedMessage>
+              <P>Ao lado você pode inserir diferentes jogos, categorias e publishers para nossa maravilhosa loja de jogos!</P>
               <Separator style={{ marginTop: 37, marginBottom: 36 }} />
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 {FIRST_BLOCK_LINKS.map((data, index) => {
@@ -146,21 +75,15 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
 
           <div className="col-md-12 col-lg-4">
             <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
-              <FormattedMessage id="HomePage.community">{msg => <h2>{msg}</h2>}</FormattedMessage>
-              <FormattedMessage id="app.components.HomePage.community.content">
-                {content => <P style={{ marginTop: 7, marginBottom: 0 }}>{content}</P>}
-              </FormattedMessage>
-              <FormattedMessage id="HomePage.roadmap">
-                {msg => (
-                  <ALink
+              <h2>Veja nossos links</h2>
+                <P style={{ marginTop: 7, marginBottom: 0 }}>Em caso de dúvidas ou sugestões só ir em algum de nossos links :)</P>
+                <ALink
                     rel="noopener noreferrer"
-                    href="https://portal.productboard.com/strapi/1-public-roadmap/tabs/2-under-consideration"
+                    href="https://reactavancado.com.br"
                     target="_blank"
                   >
-                    {msg}
+                    Veja nosso planejamento de módulos
                   </ALink>
-                )}
-              </FormattedMessage>
 
               <Separator style={{ marginTop: 18 }} />
               <div
