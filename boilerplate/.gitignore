@@ -32,3 +32,6 @@ yarn-error.log*
 # service workers
 public/sw.js
 public/workbox-*.js
+
+# misc
+.vscode/
