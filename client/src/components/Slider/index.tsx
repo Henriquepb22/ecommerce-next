@@ -2,11 +2,11 @@ import SlickSlider, { Settings } from 'react-slick'
 
 import * as S from './styles'
 
-export type SlideSettings = Settings
+export type SliderSettings = Settings
 
 type SliderProps = {
   children: React.ReactNode
-  settings: SlideSettings
+  settings: SliderSettings
 }
 
 const Slider = ({ children, settings }: SliderProps) => (
