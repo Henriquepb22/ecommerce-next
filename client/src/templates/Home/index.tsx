@@ -3,11 +3,11 @@ import { GameCardProps } from 'components/GameCard'
 import Highlight, { HightlightProps } from 'components/Highlight'
 
 import { Container } from 'components/Container'
+import GameCardSlider from 'components/GameCardSlider'
+import BannerSlider from 'components/BannerSlider'
 import Heading from 'components/Heading'
 import Footer from 'components/Footer'
 import Menu from 'components/Menu'
-import GameCardSlider from 'components/GameCardSlider'
-import BannerSlider from 'components/BannerSlider'
 
 import * as S from './styles'
 

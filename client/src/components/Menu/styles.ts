@@ -7,6 +7,7 @@ export const Wrapper = styled.menu`
     align-items: center;
     padding: ${theme.spacings.small} 0;
     position: relative;
+    z-index: ${theme.layers.menu};
   `}
 `
 
@@ -35,7 +36,7 @@ export const MenuGroup = styled.div`
     align-items: center;
 
     > div {
-      margin-left: ${theme.spacings.small};
+      margin-left: ${theme.spacings.xsmall};
     }
   `}
 `
@@ -91,7 +92,8 @@ export const MenuFull = styled.nav<MenuFullProps>`
     flex-direction: column;
     justify-content: space-between;
     background: ${theme.colors.white};
-    position: absolute;
+    position: fixed;
+    z-index: ${theme.layers.menu};
     top: 0;
     left: 0;
     right: 0;
