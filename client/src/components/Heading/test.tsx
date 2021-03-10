@@ -5,11 +5,13 @@ import Heading from '.'
 
 describe('<Heading />', () => {
   it('should render a white heading by default', () => {
-    renderWithTheme(<Heading>Won Games</Heading>)
+    const { container } = renderWithTheme(<Heading>Won Games</Heading>)
 
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
       color: '#FAFAFA'
     })
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render a black heading when color is passed', () => {

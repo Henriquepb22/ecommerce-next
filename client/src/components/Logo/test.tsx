@@ -9,6 +9,8 @@ describe('<Logo />', () => {
     const { container } = renderWithTheme(<Logo id="myId" />)
 
     expect(container.querySelector('#paint_linear_myId')).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render a white label by default', () => {
