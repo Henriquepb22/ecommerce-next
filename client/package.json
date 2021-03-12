@@ -26,6 +26,9 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/fa-brands": "^10.26.0",
+    "@styled-icons/material-outlined": "^10.28.0",
+    "@styled-icons/remix-fill": "^10.18.0",
     "next": "9.5.4",
     "next-pwa": "^3.1.4",
     "polished": "^4.0.5",
@@ -33,7 +36,6 @@
     "react-dom": "16.13.1",
     "react-slick": "^0.28.0",
     "styled-components": "5.1.1",
-    "styled-icons": "^10.21.0",
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
