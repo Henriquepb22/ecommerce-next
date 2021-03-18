@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 import { tint } from 'polished'
 
-export const Wrapper = styled.main`
+export const Wrapper = styled.div`
   ${({ theme }) => css`
     background: ${theme.colors.white};
     display: flex;
