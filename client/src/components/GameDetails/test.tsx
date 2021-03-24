@@ -8,7 +8,7 @@ const props: GameDetailsProps = {
   platforms: ['windows', 'mac', 'linux'],
   releaseDate: '2020-11-21T23:00:00',
   publisher: '2K',
-  rating: 'BR0',
+  rating: 'FREE',
   genres: ['Role-playing', 'Narrative']
 }
 
@@ -49,7 +49,7 @@ describe('<GameDetails />', () => {
   })
 
   it('should render 18+ rating when BR18', () => {
-    renderWithTheme(<GameDetails {...props} rating="BR18" />)
+    renderWithTheme(<GameDetails {...props} rating="pegi18" />)
 
     expect(screen.getByText(/18\+/i)).toBeInTheDocument()
   })
