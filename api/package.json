@@ -9,29 +9,28 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^21.0.0",
-    "@ckeditor/ckeditor5-react": "^2.1.0",
-    "form-data": "^3.0.0",
-    "jsdom": "^16.4.0",
-    "knex": "<0.20.0",
-    "pg": "latest",
-    "slugify": "^1.4.5",
-    "strapi": "3.1.5",
-    "strapi-admin": "3.1.5",
-    "strapi-connector-bookshelf": "3.1.5",
-    "strapi-plugin-content-manager": "3.1.5",
-    "strapi-plugin-content-type-builder": "3.1.5",
-    "strapi-plugin-email": "3.1.5",
+    "@ckeditor/ckeditor5-build-classic": "^27.0.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
+    "form-data": "^4.0.0",
+    "jsdom": "^16.5.1",
+    "knex": "^0.95.2",
+    "pg": "^8.5.1",
+    "slugify": "^1.5.0",
+    "strapi": "^3.5.3",
+    "strapi-admin": "^3.5.3",
+    "strapi-connector-bookshelf": "^3.5.3",
+    "strapi-plugin-content-manager": "^3.5.3",
+    "strapi-plugin-content-type-builder": "^3.5.3",
+    "strapi-plugin-email": "^3.5.3",
     "strapi-plugin-entity-relationship-chart": "^3.1.0",
-    "strapi-plugin-graphql": "3.1.5",
-    "strapi-plugin-upload": "3.1.5",
-    "strapi-plugin-users-permissions": "3.1.5",
-    "strapi-utils": "3.1.5"
+    "strapi-plugin-graphql": "^3.5.3",
+    "strapi-plugin-upload": "^3.5.3",
+    "strapi-plugin-users-permissions": "^3.5.3",
+    "strapi-utils": "^3.5.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Henrique Pereira Barros"
   },
   "strapi": {
     "uuid": "6b4f32d1-5ba9-4672-8bf1-9684d265df83"
