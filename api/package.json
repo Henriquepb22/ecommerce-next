@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^21.0.0",
+    "@ckeditor/ckeditor5-build-classic": "^27.0.0",
     "@ckeditor/ckeditor5-react": "^2.1.0",
     "form-data": "^3.0.0",
     "jsdom": "^16.4.0",
