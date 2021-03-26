@@ -9,7 +9,8 @@ import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
 
 function App({ Component, pageProps }: AppProps) {
-  const client = useApollo(pageProps.initialApoloState)
+  // Cache from hydrated pages
+  const client = useApollo(pageProps.initialApolloState)
 
   return (
     <ApolloProvider client={client}>
