@@ -9,6 +9,7 @@ import Button from 'components/Button'
 import Radio from 'components/Radio'
 
 import * as S from './styles'
+import { useEffect } from 'react'
 
 export type ItemProps = {
   title: string
@@ -38,6 +39,11 @@ const ExploreSidebar = ({
   const [values, setValues] = useState(initialValues)
   const [isOpen, setIsOpen] = useState(false)
 
+  useEffect(() => {
+    onFilter(values)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [values])
+
   const handleRadio = (name: string, value: boolean | string) => {
     setValues((oldValues) => ({ ...oldValues, [name]: value }))
   }
@@ -50,8 +56,7 @@ const ExploreSidebar = ({
     }))
   }
 
-  const handleFilter = () => {
-    onFilter(values)
+  const handleFilterMenu = () => {
     setIsOpen(false)
   }
 
@@ -104,7 +109,7 @@ const ExploreSidebar = ({
       </S.Content>
 
       <S.Footer>
-        <Button fullWidth size="medium" onClick={handleFilter}>
+        <Button fullWidth size="medium" onClick={handleFilterMenu}>
           Filter
         </Button>
       </S.Footer>
