@@ -28,6 +28,12 @@ const Games = ({ filterItems }: GamesProps) => {
     }
   })
 
+  if (!data) return <p>Loading...</p>
+
+  const { games, gamesConnection } = data
+
+  const hasMoreGames = games.length < (gamesConnection?.values?.length || 0)
+
   const handleFilter = (items: ParsedUrlQueryInput) => {
     push({
       pathname: '/games',
@@ -53,10 +59,10 @@ const Games = ({ filterItems }: GamesProps) => {
         />
 
         <section>
-          {data?.games.length ? (
+          {games.length ? (
             <>
               <Grid>
-                {data?.games.map((game) => (
+                {games.map((game) => (
                   <GameCard
                     key={game.slug}
                     title={game.name}
@@ -68,19 +74,21 @@ const Games = ({ filterItems }: GamesProps) => {
                 ))}
               </Grid>
 
-              <S.ShowMore>
-                {loading ? (
-                  <S.ShowMoreLoading
-                    src="/img/dots.svg"
-                    alt="Loading more games..."
-                  />
-                ) : (
-                  <S.ShowMoreButton role="button" onClick={handleShowMore}>
-                    <p>Show more</p>
-                    <ArrowDown size={35} />
-                  </S.ShowMoreButton>
-                )}
-              </S.ShowMore>
+              {hasMoreGames && (
+                <S.ShowMore>
+                  {loading ? (
+                    <S.ShowMoreLoading
+                      src="/img/dots.svg"
+                      alt="Loading more games..."
+                    />
+                  ) : (
+                    <S.ShowMoreButton role="button" onClick={handleShowMore}>
+                      <p>Show more</p>
+                      <ArrowDown size={35} />
+                    </S.ShowMoreButton>
+                  )}
+                </S.ShowMore>
+              )}
             </>
           ) : (
             <Empty
