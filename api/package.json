@@ -27,7 +27,7 @@
     "strapi-plugin-graphql": "^3.5.3",
     "strapi-plugin-upload": "^3.5.3",
     "strapi-plugin-users-permissions": "^3.5.3",
-    "strapi-utils": "^3.5.3"
+    "strapi-utils": "^3.6.5"
   },
   "author": {
     "name": "Henrique Pereira Barros"
