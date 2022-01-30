@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Showcase /> should render full showcase 1`] = `
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -27,11 +27,11 @@ exports[`<Showcase /> should render full showcase 1`] = `
   padding: 0.8rem 3.2rem;
 }
 
-.c9:hover {
+.c10:hover {
   background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
 }
 
-.c24 {
+.c25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -56,19 +56,19 @@ exports[`<Showcase /> should render full showcase 1`] = `
   font-size: 1.2rem;
 }
 
-.c24:hover {
+.c25:hover {
   background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
 }
 
-.c24 svg {
+.c25 svg {
   width: 1.5rem;
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.8rem;
 }
 
-.c4 {
+.c5 {
   position: relative;
   background-image: url(/img/red-dead-img.jpg);
   background-position: center center;
@@ -79,7 +79,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
   grid-template-columns: 1.3fr 2fr;
 }
 
-.c4::after {
+.c5::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -87,36 +87,36 @@ exports[`<Showcase /> should render full showcase 1`] = `
   background-color: rgba(0,0,0,0.6);
 }
 
-.c4 .c5 {
+.c5 .c6 {
   text-align: right;
 }
 
-.c6 {
+.c7 {
   grid-area: content;
   z-index: 10;
   padding: 1.6rem;
 }
 
-.c7 {
+.c8 {
   font-size: 1.8rem;
   font-weight: 600;
   color: #FAFAFA;
 }
 
-.c8 {
+.c9 {
   font-size: 1.4rem;
   font-weight: 300;
   color: #FAFAFA;
   margin-bottom: 3.2rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
 }
 
-.c13 {
+.c14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -130,7 +130,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
   background-color: #FAFAFA;
 }
 
-.c14 {
+.c15 {
   height: 14rem;
   width: 100%;
   background: #f6f7f8;
@@ -140,13 +140,13 @@ exports[`<Showcase /> should render full showcase 1`] = `
   animation: placeholderShimmer 1s linear infinite forwards;
 }
 
-.c14 img {
+.c15 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,26 +163,26 @@ exports[`<Showcase /> should render full showcase 1`] = `
   margin: 1.6rem;
 }
 
-.c16 {
+.c17 {
   max-width: calc(100% - 2.5rem);
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c17 {
+.c18 {
   font-size: 1.6rem;
   line-height: 1.6rem;
   font-weight: 600;
   color: #030517;
 }
 
-.c18 {
+.c19 {
   font-size: 1.4rem;
   font-weight: 600;
   color: #8F8F8F;
 }
 
-.c19 {
+.c20 {
   color: #F231A5;
   position: absolute;
   right: 0;
@@ -190,11 +190,11 @@ exports[`<Showcase /> should render full showcase 1`] = `
   cursor: pointer;
 }
 
-.c19 svg {
+.c20 svg {
   width: 2.5rem;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +210,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
   margin-top: 0.8rem;
 }
 
-.c22 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -227,7 +227,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
   margin-right: 1.6rem;
 }
 
-.c23 {
+.c24 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -245,7 +245,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
   margin-right: calc(0.8rem / 2);
 }
 
-.c12 .slick-slider {
+.c13 .slick-slider {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -263,7 +263,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c12 .slick-list {
+.c13 .slick-list {
   position: relative;
   display: block;
   overflow: hidden;
@@ -271,17 +271,17 @@ exports[`<Showcase /> should render full showcase 1`] = `
   padding: 0;
 }
 
-.c12 .slick-list:focus {
+.c13 .slick-list:focus {
   outline: none;
 }
 
-.c12 .slick-list.dragging {
+.c13 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-.c12 .slick-slider .slick-track,
-.c12 .slick-slider .slick-list {
+.c13 .slick-slider .slick-track,
+.c13 .slick-slider .slick-list {
   -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
@@ -291,77 +291,77 @@ exports[`<Showcase /> should render full showcase 1`] = `
   transform: translate3d(0,0,0);
 }
 
-.c12 .slick-track {
+.c13 .slick-track {
   position: relative;
   top: 0;
   left: 0;
   display: block;
 }
 
-.c12 .slick-track:before,
-.c12 .slick-track:after {
+.c13 .slick-track:before,
+.c13 .slick-track:after {
   display: table;
   content: '';
 }
 
-.c12 .slick-track:after {
+.c13 .slick-track:after {
   clear: both;
 }
 
-.c12 .slick-loading .slick-track {
+.c13 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-.c12 .slick-slide {
+.c13 .slick-slide {
   display: none;
   float: left;
   height: 100%;
   min-height: 1px;
 }
 
-.c12 [dir='rtl'] .slick-slide {
+.c13 [dir='rtl'] .slick-slide {
   float: right;
 }
 
-.c12 .slick-slide img {
+.c13 .slick-slide img {
   display: block;
 }
 
-.c12 .slick-slide.slick-loading img {
+.c13 .slick-slide.slick-loading img {
   display: none;
 }
 
-.c12 .slick-slide.dragging img {
+.c13 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-.c12 .slick-initialized .slick-slide {
+.c13 .slick-initialized .slick-slide {
   display: block;
 }
 
-.c12 .slick-loading .slick-slide {
+.c13 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-.c12 .slick-vertical .slick-slide {
+.c13 .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
 
-.c12 .slick-arrow.slick-hidden {
+.c13 .slick-arrow.slick-hidden {
   display: none;
 }
 
-.c11 .slick-track,
-.c11 .slick-list {
+.c12 .slick-track,
+.c12 .slick-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c11 .slick-slide > div {
+.c12 .slick-slide > div {
   margin: 0 0.8rem;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
@@ -369,12 +369,12 @@ exports[`<Showcase /> should render full showcase 1`] = `
   height: 100%;
 }
 
-.c11 .slick-list {
+.c12 .slick-list {
   margin: 0 -0.8rem;
 }
 
-.c11 .slick-prev,
-.c11 .slick-next {
+.c12 .slick-prev,
+.c12 .slick-next {
   display: block;
   color: #FAFAFA;
   cursor: pointer;
@@ -388,20 +388,20 @@ exports[`<Showcase /> should render full showcase 1`] = `
   transform: translate(0,-50%);
 }
 
-.c11 .slick-prev {
+.c12 .slick-prev {
   left: -5.6rem;
 }
 
-.c11 .slick-next {
+.c12 .slick-next {
   right: -5.6rem;
 }
 
-.c11 .slick-prev.slick-disabled,
-.c11 .slick-next.slick-disabled {
+.c12 .slick-prev.slick-disabled,
+.c12 .slick-next.slick-disabled {
   visibility: hidden;
 }
 
-.c2 {
+.c3 {
   color: #FAFAFA;
   padding-left: 0.8rem;
   border-left: 0.7rem solid #3CD3C1;
@@ -415,23 +415,26 @@ exports[`<Showcase /> should render full showcase 1`] = `
   margin-right: auto;
   padding-left: calc(3.2rem / 2);
   padding-right: calc(3.2rem / 2);
+}
+
+.c1 {
   margin-bottom: calc(4.0rem * 2);
 }
 
-.c0 .c1,
-.c0 .c3,
-.c0 .c10 {
+.c1 .c2,
+.c1 .c4,
+.c1 .c11 {
   margin-bottom: 3.2rem;
 }
 
 @media (min-width:768px) {
-  .c4 {
+  .c5 {
     height: 32rem;
   }
 }
 
 @media (min-width:768px) {
-  .c6 {
+  .c7 {
     -webkit-align-self: end;
     -ms-flex-item-align: end;
     align-self: end;
@@ -440,79 +443,79 @@ exports[`<Showcase /> should render full showcase 1`] = `
 }
 
 @media (min-width:768px) {
-  .c7 {
+  .c8 {
     font-size: 2.8rem;
   }
 }
 
 @media (min-width:768px) {
-  .c8 {
+  .c9 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width:1440px) {
-  .c11 {
+  .c12 {
     overflow-x: hidden;
   }
 }
 
 @media (min-width:1170px) {
-  .c11 .slick-slide > div {
+  .c12 .slick-slide > div {
     margin: 0 1.6rem;
   }
 
-  .c11 .slick-list {
+  .c12 .slick-list {
     margin: 0 -1.6rem;
   }
 }
 
 @media (min-width:768px) {
-  .c2 {
+  .c3 {
     font-size: 2.8rem;
   }
 }
 
 @media (max-width:768px) {
-  .c0 .c3 {
+  .c1 .c4 {
     margin-right: calc(-3.2rem / 2);
     margin-left: calc(-3.2rem / 2);
   }
 }
 
 @media (max-width:1440px) {
-  .c0 .c10 {
+  .c1 .c11 {
     margin-right: calc(-3.2rem / 2);
   }
 }
 
 <section
-  class="c0"
+  class="c0 c1"
 >
   <h2
-    class="c1 c2"
+    class="c2 c3"
     color="white"
   >
     Most Popular
   </h2>
   <section
-    class="c3 c4"
+    class="c4 c5"
   >
     <div
-      class="c5 c6"
+      class="c6 c7"
     >
       <h2
-        class="c7"
+        class="c8"
       >
         Red Dead is back!
       </h2>
       <h3
-        class="c8"
+        class="c9"
       >
         Come see John\`s new adventures
       </h3>
       <a
-        class="c9"
+        class="c10"
         href="/rdr2"
       >
         <span>
@@ -522,11 +525,11 @@ exports[`<Showcase /> should render full showcase 1`] = `
     </div>
   </section>
   <section
-    class="c10 c11"
+    class="c11 c12"
     color="white"
   >
     <section
-      class="c12"
+      class="c13"
     >
       <div
         class="slick-slider slick-initialized"
@@ -548,10 +551,10 @@ exports[`<Showcase /> should render full showcase 1`] = `
             >
               <div>
                 <article
-                  class="c13"
+                  class="c14"
                 >
                   <a
-                    class="c14"
+                    class="c15"
                     href="/game/population-zero"
                   >
                     <img
@@ -560,31 +563,31 @@ exports[`<Showcase /> should render full showcase 1`] = `
                     />
                   </a>
                   <div
-                    class="c15"
+                    class="c16"
                   >
                     <a
-                      class="c16"
+                      class="c17"
                       href="/game/population-zero"
                     >
                       <h3
-                        class="c17"
+                        class="c18"
                       >
                         Population Zero
                       </h3>
                       <h4
-                        class="c18"
+                        class="c19"
                       >
                         Rockstar Games
                       </h4>
                     </a>
                     <div
-                      class="c19"
+                      class="c20"
                       role="button"
                     >
                       <svg
                         aria-hidden="true"
                         aria-label="Add to Wishlist"
-                        class="c20"
+                        class="c21"
                         fill="currentColor"
                         focusable="false"
                         viewBox="0 0 24 24"
@@ -600,24 +603,24 @@ exports[`<Showcase /> should render full showcase 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c21"
+                      class="c22"
                     >
                       <div
-                        class="c22"
+                        class="c23"
                       >
                         $235.00
                       </div>
                       <div
-                        class="c23"
+                        class="c24"
                       >
                         $215.00
                       </div>
                       <button
-                        class="c24"
+                        class="c25"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c20"
+                          class="c21"
                           fill="currentColor"
                           focusable="false"
                           viewBox="0 0 24 24"
