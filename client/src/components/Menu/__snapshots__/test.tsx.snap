@@ -44,7 +44,7 @@ exports[`<Menu /> should render the menu 1`] = `
   background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
 }
 
-.c32 {
+.c34 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -71,7 +71,7 @@ exports[`<Menu /> should render the menu 1`] = `
   width: 100%;
 }
 
-.c32:hover {
+.c34:hover {
   background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
 }
 
@@ -165,6 +165,7 @@ exports[`<Menu /> should render the menu 1`] = `
   margin-top: 2.4rem;
   position: absolute;
   right: 0;
+  z-index: 50;
 }
 
 .c17::before {
@@ -177,6 +178,16 @@ exports[`<Menu /> should render the menu 1`] = `
   right: 2.4rem;
 }
 
+.c30 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 30;
+}
+
 .c13 {
   position: relative;
   width: -webkit-max-content;
@@ -184,7 +195,8 @@ exports[`<Menu /> should render the menu 1`] = `
   width: max-content;
 }
 
-.c13 .c16 {
+.c13 .c16,
+.c13 .c29 {
   -webkit-transition: -webkit-transform 0.2s ease-in,opacity 0.3s ease-in-out;
   -webkit-transition: transform 0.2s ease-in,opacity 0.3s ease-in-out;
   transition: transform 0.2s ease-in,opacity 0.3s ease-in-out;
@@ -277,7 +289,7 @@ exports[`<Menu /> should render the menu 1`] = `
   animation: hoverAnimation 0.2s forwards;
 }
 
-.c29 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -304,7 +316,7 @@ exports[`<Menu /> should render the menu 1`] = `
   pointer-events: none;
 }
 
-.c29 > svg {
+.c31 > svg {
   position: absolute;
   top: 0;
   right: 0;
@@ -314,7 +326,7 @@ exports[`<Menu /> should render the menu 1`] = `
   height: 2.4rem;
 }
 
-.c29 .c7 {
+.c31 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -335,7 +347,7 @@ exports[`<Menu /> should render the menu 1`] = `
   flex-direction: column;
 }
 
-.c29 .c9 {
+.c31 .c9 {
   color: #030517;
   font-weight: 600;
   font-size: 2.0rem;
@@ -348,7 +360,7 @@ exports[`<Menu /> should render the menu 1`] = `
   transition: transform 0.3s ease-in-out;
 }
 
-.c29 .c30 {
+.c31 .c32 {
   -webkit-transform: translateY(3rem);
   -ms-transform: translateY(3rem);
   transform: translateY(3rem);
@@ -357,7 +369,7 @@ exports[`<Menu /> should render the menu 1`] = `
   transition: transform 0.3s ease-in-out;
 }
 
-.c31 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -372,13 +384,13 @@ exports[`<Menu /> should render the menu 1`] = `
   padding: 0 4.8rem 4.8rem;
 }
 
-.c31 > span {
+.c33 > span {
   display: block;
   margin: 0.8rem 0;
   font-size: 1.2rem;
 }
 
-.c33 {
+.c35 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F231A5;
@@ -669,6 +681,10 @@ exports[`<Menu /> should render the menu 1`] = `
                 </div>
               </div>
             </div>
+            <div
+              aria-hidden="true"
+              class="c29 c30"
+            />
           </div>
         </div>
       </div>
@@ -717,7 +733,7 @@ exports[`<Menu /> should render the menu 1`] = `
   </div>
   <nav
     aria-hidden="true"
-    class="c29"
+    class="c31"
   >
     <svg
       aria-hidden="true"
@@ -753,10 +769,10 @@ exports[`<Menu /> should render the menu 1`] = `
       </a>
     </div>
     <div
-      class="c30 c31"
+      class="c32 c33"
     >
       <a
-        class="c32"
+        class="c34"
         href="/sign-in"
       >
         <span>
@@ -767,7 +783,7 @@ exports[`<Menu /> should render the menu 1`] = `
         or
       </span>
       <a
-        class="c33"
+        class="c35"
         href="/sign-up"
         title="Sign Up"
       >
