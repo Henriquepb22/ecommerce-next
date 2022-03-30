@@ -64,6 +64,7 @@ const Games = ({ filterItems }: GamesProps) => {
               <Grid>
                 {games.map((game) => (
                   <GameCard
+                    id={game.id}
                     key={game.slug}
                     title={game.name}
                     slug={game.slug}
