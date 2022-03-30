@@ -4,7 +4,7 @@ import { setStorageItem } from 'utils/localStorage'
 
 import { CartProvider, useCart, CartProviderProps } from '.'
 import { cartItems, gamesMock } from './mock'
-import { act } from '@testing-library/react'
+import { act } from 'utils/test-utils'
 
 describe('useCart', () => {
   beforeEach(() => {

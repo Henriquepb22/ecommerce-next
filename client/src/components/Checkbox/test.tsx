@@ -1,12 +1,11 @@
-import { screen, waitFor } from '@testing-library/react'
-import { renderWithTheme } from 'utils/tests/helpers'
+import { screen, render, waitFor } from 'utils/test-utils'
 import userEvent from '@testing-library/user-event'
 
 import Checkbox from '.'
 
 describe('<Checkbox />', () => {
   it('should render with label', () => {
-    const { container } = renderWithTheme(
+    const { container } = render(
       <Checkbox label="checkbox label" labelFor="check" />
     )
 
@@ -18,13 +17,13 @@ describe('<Checkbox />', () => {
   })
 
   it('should render without label', () => {
-    renderWithTheme(<Checkbox />)
+    render(<Checkbox />)
 
     expect(screen.queryByLabelText('Checkbox')).not.toBeInTheDocument()
   })
 
   it('should render with black label', () => {
-    renderWithTheme(
+    render(
       <Checkbox label="checkbox label" labelFor="check" labelColor="black" />
     )
 
@@ -36,7 +35,7 @@ describe('<Checkbox />', () => {
   it('should dispatch onCheck when status changes', async () => {
     const onCheck = jest.fn()
 
-    renderWithTheme(
+    render(
       <Checkbox label="checkbox label" labelFor="check" onCheck={onCheck} />
     )
 
@@ -53,7 +52,7 @@ describe('<Checkbox />', () => {
   it('should uncheck on ', async () => {
     const onCheck = jest.fn()
 
-    renderWithTheme(
+    render(
       <Checkbox
         label="checkbox label"
         labelFor="check"
@@ -70,7 +69,7 @@ describe('<Checkbox />', () => {
   })
 
   it('should be accessible with tab', () => {
-    renderWithTheme(<Checkbox label="checkbox label" labelFor="check" />)
+    render(<Checkbox label="checkbox label" labelFor="check" />)
 
     expect(document.body).toHaveFocus()
 

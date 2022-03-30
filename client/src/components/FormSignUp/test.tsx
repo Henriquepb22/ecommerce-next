@@ -1,11 +1,10 @@
-import { renderWithTheme } from 'utils/tests/helpers'
-import { screen } from '@testing-library/react'
+import { screen, render } from 'utils/test-utils'
 
 import FormSignUp from '.'
 
 describe('<FormSignUp />', () => {
   it('should render the form', () => {
-    const { container } = renderWithTheme(<FormSignUp />)
+    const { container } = render(<FormSignUp />)
 
     expect(screen.getByPlaceholderText(/email/i)).toBeInTheDocument()
     expect(screen.getByPlaceholderText(/email/i)).toBeInTheDocument()
@@ -19,7 +18,7 @@ describe('<FormSignUp />', () => {
   })
 
   it('should render the text to sign up', () => {
-    renderWithTheme(<FormSignUp />)
+    render(<FormSignUp />)
 
     expect(screen.getByText(/already have an account\?/i)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /sign in/i })).toBeInTheDocument()
