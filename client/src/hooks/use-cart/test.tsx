@@ -24,7 +24,11 @@ describe('useCart', () => {
       wrapper
     })
 
+    expect(result.current.loading).toBeTruthy()
+
     await waitForNextUpdate()
+
+    expect(result.current.loading).toBeFalsy()
 
     expect(result.current.items).toStrictEqual(cartItems)
     expect(result.current.quantity).toBe(2)
