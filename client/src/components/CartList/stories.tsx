@@ -42,6 +42,16 @@ WithButton.args = {
   cartContextValue: { items }
 }
 
+export const Loading: Story = (args) => (
+  <div style={{ maxWidth: 800 }}>
+    <CartList {...args} hasButton />
+  </div>
+)
+
+Loading.args = {
+  cartContextValue: { loading: true }
+}
+
 export const Empty: Story = () => (
   <div style={{ maxWidth: 800 }}>
     <CartList />
