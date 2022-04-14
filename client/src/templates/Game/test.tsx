@@ -9,6 +9,7 @@ import gameInfoMock from 'components/GameInfo/mock'
 import galleryMock from 'components/Gallery/mock'
 
 import Game, { GameTemplateProps } from '.'
+import React from 'react'
 
 const props: GameTemplateProps = {
   cover: 'bg-image.jpg',
@@ -22,6 +23,15 @@ const props: GameTemplateProps = {
   recommendedTitle: 'You may like these games',
   recommendedGames: gamesMock
 }
+
+jest.mock('templates/Base', () => {
+  return {
+    __esModule: true,
+    default: function Mock({ children }: { children: React.ReactNode }) {
+      return <div data-testid="Mock Base">{children}</div>
+    }
+  }
+})
 
 jest.mock('components/Menu', () => {
   return {
@@ -73,6 +83,7 @@ describe('<Game />', () => {
     render(<Game {...props} />)
 
     expect(screen.getByTestId(/mock gamedetails/i)).toBeInTheDocument()
+    expect(screen.getByTestId(/mock base/i)).toBeInTheDocument()
     expect(screen.getByTestId(/mock gallery/i)).toBeInTheDocument()
     expect(screen.getByTestId(/mock gameinfo/i)).toBeInTheDocument()
     expect(screen.getByText(/custom html/i)).toBeInTheDocument()

@@ -20,8 +20,9 @@ export const UserName = styled.span`
 
 export const Link = styled.a`
   ${({ theme }) => css`
+    cursor: pointer;
     display: flex;
-    align-items;
+    align-items: center;
     text-decoration: none;
     background: ${theme.colors.white};
     color: ${theme.colors.black};
