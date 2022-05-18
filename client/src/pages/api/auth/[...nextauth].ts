@@ -49,7 +49,9 @@ const options = {
       if (user) {
         token.id = user.id
         token.email = user.email
-        token.name = user.name
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        token.name = user.username
         token.jwt = user.jwt
       }
 
