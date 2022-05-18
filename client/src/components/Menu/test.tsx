@@ -43,9 +43,17 @@ describe('<Menu />', () => {
   it('should show wishlist and account when logged in', () => {
     render(<Menu username="henrique" />)
 
-    expect(screen.queryByText(/log in now/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/sign in/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/sign up/i)).not.toBeInTheDocument()
     expect(screen.getAllByText(/wishlist/i)).toHaveLength(2)
     expect(screen.getAllByText(/my profile/i)).toHaveLength(2)
+  })
+
+  it('should not show sign ir or dropdownUser if loading', () => {
+    render(<Menu username="henrique" loading />)
+
+    expect(screen.queryByText(/my profile/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/henrique/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/sign in/i)).not.toBeInTheDocument()
   })
 })
