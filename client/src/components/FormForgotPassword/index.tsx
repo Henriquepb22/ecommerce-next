@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { UsersPermissionsRegisterInput } from 'graphql/generated/globalTypes'
 import { FormWrapper, FormLoading, FormError } from 'components/Form'
-import { FieldErrors } from 'utils/validations'
+import { FieldErrors, forgotValidate } from 'utils/validations'
 import TextField from 'components/TextField'
 import Button from 'components/Button'
 
@@ -25,7 +25,7 @@ const FormForgotPassword = () => {
     event.preventDefault()
     setLoading(true)
 
-    const errors = {}
+    const errors = forgotValidate(values)
 
     if (Object.keys(errors).length) {
       setFieldError(errors)

@@ -4,7 +4,7 @@ import { signIn } from 'next-auth/client'
 import { useRouter } from 'next/router'
 
 import { FormWrapper, FormLoading, FormError } from 'components/Form'
-import { FieldErrors } from 'utils/validations'
+import { FieldErrors, resetValidate } from 'utils/validations'
 import TextField from 'components/TextField'
 import Button from 'components/Button'
 
@@ -13,7 +13,7 @@ const FormResetPassword = () => {
   const [fieldError, setFieldError] = useState<FieldErrors>({})
   const [values, setValues] = useState({
     password: '',
-    confirmPassword: ''
+    confirm_password: ''
   })
   const [loading, setLoading] = useState(false)
   const routes = useRouter()
@@ -23,7 +23,7 @@ const FormResetPassword = () => {
     event.preventDefault()
     setLoading(true)
 
-    const errors = {}
+    const errors = resetValidate(values)
 
     if (Object.keys(errors).length) {
       setFieldError(errors)
