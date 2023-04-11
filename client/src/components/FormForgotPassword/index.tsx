@@ -4,6 +4,7 @@ import {
   Email,
   ErrorOutline
 } from '@styled-icons/material-outlined'
+import { useRouter } from 'next/router'
 
 import { UsersPermissionsRegisterInput } from 'graphql/generated/globalTypes'
 import {
@@ -17,13 +18,14 @@ import TextField from 'components/TextField'
 import Button from 'components/Button'
 
 const FormForgotPassword = () => {
+  const { query } = useRouter()
   const [success, setSuccess] = useState(false)
   const [formError, setFormError] = useState('')
   const [fieldError, setFieldError] = useState<FieldErrors>({})
   const [values, setValues] = useState<
     Omit<UsersPermissionsRegisterInput, 'username' | 'password'>
   >({
-    email: ''
+    email: (query.email as string) || ''
   })
   const [loading, setLoading] = useState(false)
 
@@ -85,6 +87,7 @@ const FormForgotPassword = () => {
               placeholder="Email"
               type="text"
               onInputChange={(value) => handleInput('email', value)}
+              initialValue={query.email as string}
               error={fieldError?.email}
               icon={<Email />}
             />
